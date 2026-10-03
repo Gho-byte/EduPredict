@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import joblib
 from inputs_transformer import InputsTransformer
 
@@ -86,6 +87,10 @@ if submitted:
         "Gender": Gender
     }])
 
-    prediction = model.predict(input_data)[0]
+    transformer = InputsTransformer(input_data, '/home/mohamed/Documents/Github/Gho-byte/EduPredict/NoteBooks/fit.csv')
+    transformed_input = transformer.get_result()
+    prediction = model.predict(transformed_input)[0]
+    prediction = transformer.inverse_transformation('Exam_Score', prediction)
+    prediction = np.float16(prediction[0])
 
-    st.success(f"📊 Predicted Exam Score: **{prediction:.2f}**")
+    st.success(f"📊 Predicted Exam Score: **{prediction}**")
