@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from inputs_transformer import InputsTransformer
 
 model = joblib.load('Models/linear_regression.pkl')
 
