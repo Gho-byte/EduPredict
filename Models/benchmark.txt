@@ -1,2 +1,4 @@
-[+] Linear Regression: MAE => 0.010229099221850009 | RMSE => 0.04355828393048775 | R² => 0.7368244804929566
-[+] Random Forest: MAE => 0.010229099221850009 | RMSE => 0.04355828393048775 | R² => 0.7368244804929566
+[+] Linear Regression: MAE => 0.016657428485497703 | RMSE => 0.04587251701438012 | R² => 0.708116794703661
+[+] Random Forest: MAE => 0.016657428485497703 | RMSE => 0.04587251701438012 | R² => 0.708116794703661
+[+] Random Forest With Grid Search: MAE => 0.08373650614020985 | RMSE => 0.10874706837851623 | R² => 0.6527810987121219 | Best Params: {'criterion': 'absolute_error', 'n_estimators': 200} | Score: 0.6527810987121219
+[+] Random Forest With Grid Search: MAE => 0.09599429290007057 | RMSE => 0.1223759208678517 | R² => 0.3258453040470135 | Best Params: {'C': np.int64(1), 'epsilon': np.float64(0.1), 'kernel': 'rbf'} | Score: 0.3258453040470135
